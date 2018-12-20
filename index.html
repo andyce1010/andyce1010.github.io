@@ -14,6 +14,7 @@
         <p><label>Pid</label><input type="text" id="pid" size="50" /></p>
         <p><label>Increment</label><input type="text" id="increment" size="50" /></p>
         <p><input type="button" value="Generate new Id" onclick="generateNewId()"/></p>
+         <p><label>ObjectId</label><input type="text" id="guid" size="50" /></p>
     </form>
     <span id="rawObject"></span>
     <hr/>
@@ -25,6 +26,7 @@
             document.getElementById("machine").value = objectId.machine;
             document.getElementById("pid").value = objectId.pid;
             document.getElementById("increment").value = objectId.increment;
+            document.getElementById("guid").value = objectId.toString();
             if (typeof (JSON) == 'object' && typeof (JSON.stringify) == 'function') {
                 var txtNode = document.createTextNode('Raw: ');
                 var element = document.createElement('pre').appendChild(document.createTextNode(JSON.stringify(objectId)));
